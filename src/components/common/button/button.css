@@ -1,67 +1,54 @@
-* {
-    box-sizing: border-box;
-    font-family: "Poppins", system-ui, sans-serif;
-}
-
 .button {
     display: flex;
     align-items: center;
-    gap: 1.1rem;
+    justify-content: center; /* Centra el icono en el espacio largo */
+    gap: 0; /* Ya no hay espacio necesario porque no hay texto */
 
-    padding: 1.1rem 1.6rem;
+    /* Mantenemos el tamaño original de padding para que se vea como antes */
+    padding: 1.1rem 1.6rem; 
     border-radius: 18px;
 
     background: linear-gradient(
         135deg,
-        #ffffff,
-        #f1f5ff
+        #161b33,
+        #0d0c1d
     );
 
-    border: 1px solid rgba(59, 130, 246, 0.25);
-
+    border: 2px solid #f1dac4;
     cursor: pointer;
     user-select: none;
-
-    box-shadow:
-        0 8px 24px rgba(59, 130, 246, 0.15);
-
-    transition:
-        transform 0.15s ease,
-        box-shadow 0.2s ease,
-        background 0.3s ease;
+    transition: all 0.2s ease;
+    
+    /* Mantenemos la sombra original */
+    box-shadow: 0 8px 24px rgba(241, 218, 196, 0.1);
 }
 
-/* Hover con vida */
 .button:hover {
     transform: translateY(-2px);
-    box-shadow:
-        0 14px 32px rgba(59, 130, 246, 0.25);
+    background: linear-gradient(
+        135deg,
+        #474973,
+        #161b33
+    );
+    box-shadow: 0 14px 32px rgba(241, 218, 196, 0.2);
 }
 
-/* Click */
-.button:active {
-    transform: scale(0.97);
-}
-
-/* Icono */
+/* El contenedor del icono se queda igual para no deformarlo */
 .button-image {
     width: 52px;
     height: 52px;
-
     display: flex;
     align-items: center;
     justify-content: center;
 
     background: linear-gradient(
         135deg,
-        #3b82f6,
-        #6366f1
+        #474973,
+        #a69cac
     );
 
     border-radius: 14px;
-
-    box-shadow:
-        0 6px 14px rgba(59, 130, 246, 0.35);
+    border: 1px solid #f1dac4;
 }
 
 .button-image img {
@@ -70,11 +57,7 @@
     filter: brightness(0) invert(1);
 }
 
-/* Texto */
+/* Ocultamos el texto */
 .button-text {
-    margin: 0;
-    font-size: 1.05rem;
-    font-weight: 500;
-    color: #1e293b;
-    letter-spacing: 0.4px;
+    display: none;
 }

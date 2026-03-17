@@ -1,14 +1,14 @@
 /* Reset básico */
 * {
     box-sizing: border-box;
-    font-family: "Inter", system-ui, sans-serif;
+    font-family: "Poppins", system-ui, sans-serif;
 }
 
-/* Fondo general */
+/* Fondo general de la app */
 body {
     margin: 0;
     height: 100vh;
-    background: #f4f6f8;
+    background: #0d0c1d; /* El azul ultra oscuro de tu paleta */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,57 +17,88 @@ body {
 /* Contenedor login */
 .login-container {
     width: 100%;
-    max-width: 360px;
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    max-width: 380px;
+    background: #161b33; /* Azul profundo para la tarjeta */
+    padding: 2.5rem;
+    border-radius: 20px;
+    /* Borde beige nítido para que resalte */
+    border: 2px solid #f1dac4; 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 /* Título */
 .login-container h3 {
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.8rem;
     text-align: center;
-    font-weight: 600;
-    color: #1f2933;
+    font-weight: 800; /* Negrita extra */
+    font-size: 1.6rem;
+    color: #ffffff; /* Blanco puro */
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* Inputs */
 .login-container input {
-    padding: 0.75rem 1rem;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    transition: border 0.2s, box-shadow 0.2s;
+    padding: 0.9rem 1.2rem;
+    background: #0d0c1d; /* Fondo oscuro para los campos */
+    border: 1px solid #474973; /* Borde azul medio */
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600; /* Texto interno en negrita */
+    color: #ffffff; /* Lo que escribes sale blanco */
+    transition: all 0.3s ease;
+}
+
+.login-container input::placeholder {
+    color: #a69cac; /* Gris lila para el placeholder */
 }
 
 .login-container input:focus {
     outline: none;
-    border-color: #2563eb;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    border-color: #f1dac4; /* Al dar click brilla en beige */
+    box-shadow: 0 0 10px rgba(241, 218, 196, 0.2);
+    background: #161b33; /* Cambia ligeramente el fondo */
 }
 
-/* Botón */
+/* Botón de Acción */
 .login-container button {
-    margin-top: 0.5rem;
-    padding: 0.8rem;
+    margin-top: 1rem;
+    padding: 1rem;
     border: none;
-    border-radius: 8px;
-    background: #2563eb;
-    color: white;
-    font-size: 0.95rem;
-    font-weight: 500;
+    border-radius: 10px;
+    background: #f1dac4; /* El botón es el protagonista en Beige */
+    color: #0d0c1d; /* Texto oscuro sobre fondo claro */
+    font-size: 1rem;
+    font-weight: 800; /* Negrita máxima */
+    text-transform: uppercase;
     cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(241, 218, 196, 0.2);
 }
 
 .login-container button:hover {
-    background: #1d4ed8;
+    background: #ffffff; /* Se vuelve blanco puro al pasar el mouse */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
 }
 
 .login-container button:active {
-    transform: scale(0.98);
+    transform: scale(0.96);
+}
+
+/* Enlace de "olvidé mi contraseña" o similar si lo tienes */
+.login-container a {
+    color: #a69cac;
+    text-align: center;
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.login-container a:hover {
+    color: #f1dac4;
 }

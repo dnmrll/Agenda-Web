@@ -1,71 +1,133 @@
+/* Contenedor de la lista */
+.lista-contactos {
+    background-color: #0d0c1d; 
+    padding: 20px;
+}
+
 .item-contacto {
     display: flex;
     align-items: center;
     gap: 16px;
-    padding: 12px 16px;
-    border-radius: 10px;
-    background: #ffffff;
-    border: 1px solid #e5e7eb; /* gris muy claro */
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    
+    /* CAMBIO: Usamos el azul más claro de tu paleta para el fondo */
+    background: #474973; 
+    
+    /* Mantenemos el borde beige nítido */
+    border: 1px solid #f1dac4; 
+    
     transition: all 0.2s ease;
     cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .item-contacto:hover {
-    background: #f9fafb;
-    transform: translateY(-1px);
+    /* Un tono un poco más claro al pasar el mouse para dar feedback */
+    background: #5a5d8a; 
+    transform: scale(1.01);
+    box-shadow: 0 0 20px rgba(241, 218, 196, 0.2);
 }
 
 /* Imagen / avatar */
 .item-contacto img {
-    width: 48px;
-    height: 48px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     object-fit: cover;
-    background: #dbeafe; /* azul muy suave */
-    padding: 6px;
+    border: 2px solid #ffffff; 
+    background: #0d0c1d;
+    padding: 2px;
 }
 
-/* Contenedor de texto (nombre + teléfono) */
+/* Contenedor de texto */
 .item-contacto .info-contacto {
     display: flex;
     flex-direction: column;
-    gap: 8px; /* más separación entre nombre y teléfono */
+    gap: 2px;
 }
 
-/* Nombre */
+/* Nombre: BLANCO PURO Y NEGRITA EXTRA */
 .contacto-nombre {
     margin: 0;
     font-size: 16px;
-    font-weight: 600;
-    color: #111827; /* casi negro */
+    font-weight: 800; 
+    color: #ffffff !important; 
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Sombra para mayor profundidad */
+    letter-spacing: 0.3px;
 }
 
-/* Teléfono */
+/* Teléfono: Usamos el Beige claro para que se vea premium y legible */
 .contacto-telefono {
     margin: 0;
     font-size: 14px;
-    font-weight: 400;
-    color: #6b7280; /* gris medio */
+    font-weight: 700; 
+    color: #f1dac4 !important; /* Beige de la paleta */
+}/* Contenedor de la lista */
+.lista-contactos {
+    background-color: #0d0c1d; 
+    padding: 20px;
 }
 
-/* Responsive para móviles */
-@media (max-width: 768px) {
-    .item-contacto {
-        padding: 10px 12px;
-        gap: 12px;
-    }
+.item-contacto {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    
+    /* CAMBIO: Usamos el azul más claro de tu paleta para el fondo */
+    background: #474973; 
+    
+    /* Mantenemos el borde beige nítido */
+    border: 1px solid #f1dac4; 
+    
+    transition: all 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
 
-    .item-contacto img {
-        width: 40px;
-        height: 40px;
-        padding: 4px;
-    }
+.item-contacto:hover {
+    /* Un tono un poco más claro al pasar el mouse para dar feedback */
+    background: #5a5d8a; 
+    transform: scale(1.01);
+    box-shadow: 0 0 20px rgba(241, 218, 196, 0.2);
+}
 
-    .contacto-nombre {
-        font-size: 15px;
-    }
+/* Imagen / avatar */
+.item-contacto img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff; 
+    background: #0d0c1d;
+    padding: 2px;
+}
 
-    .contacto-telefono {
-        font-size: 13px;
-    }
+/* Contenedor de texto */
+.item-contacto .info-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* Nombre: BLANCO PURO Y NEGRITA EXTRA */
+.contacto-nombre {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 800; 
+    color: #ffffff !important; 
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Sombra para mayor profundidad */
+    letter-spacing: 0.3px;
+}
+
+/* Teléfono: Usamos el Beige claro para que se vea premium y legible */
+.contacto-telefono {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700; 
+    color: #f1dac4 !important; /* Beige de la paleta */
 }

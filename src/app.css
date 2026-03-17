@@ -8,8 +8,8 @@ html, body {
     width: 100%;
     height: 100%;
     font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-    background-color: #f4f5f7;
-    color: #1f2937;
+    background-color: #ffffff;
+    color: #ffffff;
 }
 
 #app {
@@ -22,8 +22,8 @@ html, body {
 /* Sidebar / nav */
 #nav {
     height: 100vh;
-    border-right: 1px solid #e0e0e0;
-    background-color: #ffffff;
+    border-right: 1px solid #000000;
+    background-color: #000000;
     overflow-y: auto;
     padding: 20px 15px;
     display: flex;
