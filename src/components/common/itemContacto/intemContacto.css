@@ -1,0 +1,71 @@
+.item-contacto {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb; /* gris muy claro */
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.item-contacto:hover {
+    background: #f9fafb;
+    transform: translateY(-1px);
+}
+
+/* Imagen / avatar */
+.item-contacto img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #dbeafe; /* azul muy suave */
+    padding: 6px;
+}
+
+/* Contenedor de texto (nombre + teléfono) */
+.item-contacto .info-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* más separación entre nombre y teléfono */
+}
+
+/* Nombre */
+.contacto-nombre {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827; /* casi negro */
+}
+
+/* Teléfono */
+.contacto-telefono {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #6b7280; /* gris medio */
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .item-contacto {
+        padding: 10px 12px;
+        gap: 12px;
+    }
+
+    .item-contacto img {
+        width: 40px;
+        height: 40px;
+        padding: 4px;
+    }
+
+    .contacto-nombre {
+        font-size: 15px;
+    }
+
+    .contacto-telefono {
+        font-size: 13px;
+    }
+}

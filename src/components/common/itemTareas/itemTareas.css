@@ -1,0 +1,127 @@
+.tareas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+}
+
+.item-tarea {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    border-left: 4px solid transparent;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    transition: all 0.25s ease;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.item-tarea:hover {
+    background: #f9fafb;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.item-tarea img.icon-importancia {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.item-tarea h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+}
+
+.item-tarea p {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Estado de la tarea a la derecha */
+.estado-container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.estado-container span {
+    font-size: 13px;
+    font-weight: 500;
+    color: #374151;
+}
+
+/* Colores según estado */
+.item-tarea.tarea-importante {
+    border-left-color: #ef4444;
+    background: #fff5f5;
+}
+
+.item-tarea.tarea-hecha {
+    border-left-color: #22c55e;
+    background: #f0fdf4;
+}
+
+.item-tarea.tarea-pendiente {
+    border-left-color: #3b82f6;
+    background: #eff6ff;
+}
+
+.item-tarea.tarea-importante h3 { color: #b91c1c; }
+.item-tarea.tarea-hecha h3 { color: #166534; }
+.item-tarea.tarea-pendiente h3 { color: #1e3a8a; }
+
+/* Botones editar/eliminar */
+.btn-container {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.btn-editar, .btn-eliminar {
+    padding: 6px 12px;
+    font-size: 13px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-editar { 
+    background: #fcd34d; 
+    color: #78350f; 
+}
+
+.btn-editar:hover {
+    background: #fbbf24;
+}
+
+.btn-eliminar {  
+    background: #f87171; 
+    color: #7f1d1d; 
+}
+
+.btn-eliminar:hover {
+    background: #ef4444;
+}
+
+/* Responsive ajustes */
+@media (max-width: 768px) {
+    .item-tarea {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 14px;
+    }
+
+    .estado-container, .btn-container {
+        margin-left: 0;
+        margin-top: 8px;
+    }
+}
